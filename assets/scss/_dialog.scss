@@ -1,0 +1,170 @@
+
+.post-type-wp_image_markers{
+    .ui-widget-header{
+        padding: 14px 18px;
+        background-color: $primary_color;
+        margin: 0;
+        font-size: 16px;
+        color:#fff;
+        .ui-dialog-titlebar-close{
+            display: inline-block;
+            cursor: pointer;
+            background: 0 0;
+            color: inherit;
+            border: none;
+            user-select: none;
+            transition-property: color,background,border,opacity,-webkit-transform;
+            transition-property: color,background,border,opacity,transform;
+            opacity: .8;
+            vertical-align: middle;
+            -moz-user-select: none;
+            transition-duration: .2s;
+            transition-timing-function: ease-in-out;
+            text-align: center;
+            box-sizing: border-box;
+            text-decoration: none;
+            outline: 0;
+            .ui-button-icon-primary{
+                &{
+                    font-size: 25px;
+                    position: absolute;
+                    top: 11px;
+                    right: 12px;
+                }
+                &:before{
+                    font-family: dashicons;
+                    content: "\f335";
+
+                }
+            }
+            .ui-button-text{
+                display: none;
+            }
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+
+    .ui-dialog{
+        &{
+            background-color: #fff;
+            box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: stretch;
+            -ms-flex-align: stretch;
+            align-items: stretch;
+            -ms-flex-line-pack: stretch;
+            align-content: stretch;
+            -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+            width:650px;
+            z-index: 99999!important;
+        }
+        .dialog-empty{
+            padding: 15px;
+            text-align: center;
+            margin-top: 48px;
+            padding-top:150px;
+            padding-bottom:150px;
+            .spinner{
+                float: none;
+                display: inline-block;
+            }
+        }
+        //Inner content
+        .wpim_dialog_inner{
+            -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+        }
+        //Header
+        .ui-dialog-titlebar{
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+        }
+
+        //Content
+        .ui-dialog-content{
+            -webkit-box-flex: 1;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            position: relative;    
+            overflow-x: hidden;
+            overflow-y: auto;
+            min-height: 150px!important;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            font-size: 14px;
+            padding:0;
+
+            p{
+                font-size: inherit;
+            }
+
+        }
+
+        .ui-dialog-titlebar{
+            border-bottom: none;
+        }
+
+        //Footer
+        .ui-dialog-buttonpane{
+            padding: 15px;
+            background: #f6f6f6;
+            margin: 0;
+            font-size: 14px;
+            text-align: right;
+            &{
+                -webkit-box-flex: 0;
+                -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+            }
+            .ui-button{
+                height: auto;
+                display: inline-block;
+                margin: 0;
+                cursor: pointer;
+                word-wrap: break-word;
+                -webkit-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                position: relative;
+                font-weight: 400;
+                font-size: 14px;
+                padding: 14px 21px;
+                border: 1px solid transparent;
+                box-shadow: none;
+                vertical-align: middle;
+                -moz-user-select: none;
+                transition-duration: .2s;
+                transition-timing-function: ease-in-out;
+                text-align: center;
+                box-sizing: border-box;
+                text-decoration: none;
+                outline: 0;
+                min-width: 140px;
+                color: #fff;
+                background-color: #bbb;
+                border-radius: 3px;
+                opacity: 1;
+                &:last-child{
+                    margin-left: 10px;
+                    background-color: $primary_color;
+                }
+                &:hover{
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}
+

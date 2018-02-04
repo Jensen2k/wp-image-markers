@@ -24,7 +24,7 @@ $primary_color:#3F51B5;
                 left: 0;
                 right: 0;
                 bottom: 0;
-                background-color: rgba(255,255,255,.5);
+                background-color: rgba(255,255,255,.3);
                 z-index: 99;
             }
         }
@@ -194,6 +194,7 @@ $primary_color:#3F51B5;
         outline: none;
         font-weight: bold;
         box-sizing: content-box;
+        cursor: move;
         -webkit-background-clip: padding-box; /* for Safari */
         background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
         img{
@@ -201,9 +202,15 @@ $primary_color:#3F51B5;
             height: 100%;
             border-radius: inherit;
         }
-        
+
         .icon__arrow{
             display: none;
+        }
+        i{
+            width: auto;
+            height: auto;
+            font-size: inherit;
+            line-height: inherit;
         }
     }
 
@@ -247,7 +254,7 @@ $primary_color:#3F51B5;
             transition: .2s;
         }
     }
-    
+
     &__toolbar{
         display: flex;
         font-size: 12px;
@@ -309,17 +316,10 @@ $primary_color:#3F51B5;
         }
     }
 
-    &:hover{
+    &:hover,&.current-edit{
         .wpim-marker__toolbar{
             opacity: 1;
             visibility: visible;
-        }
-    }
-
-    &.edited{
-        cursor: not-allowed;
-        .wpim-marker__toolbar{
-            display: none;
         }
     }
 }

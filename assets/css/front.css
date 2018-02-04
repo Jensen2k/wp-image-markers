@@ -2500,8 +2500,8 @@
 
 .wpim {
   position: relative;
-  overflow: hidden;
-  display: inline-block; }
+  display: inline-block;
+  z-index: 9; }
   .wpim-image img {
     max-width: none;
     max-height: none; }
@@ -2546,16 +2546,21 @@
         -o-transition: .3s;
         transition: .3s;
         border-radius: inherit; }
-      .wpim-marker__icon .wpim-icon-image__hover {
-        visibility: hidden;
-        opacity: 0; }
-      .wpim-marker__icon:hover .wpim-icon-image {
-        visibility: hidden;
-        opacity: 0; }
-        .wpim-marker__icon:hover .wpim-icon-image__hover {
-          visibility: visible;
-          opacity: 1; }
+      .wpim-marker__icon > i {
+        width: auto;
+        height: auto;
+        font-size: inherit;
+        line-height: inherit; }
       .wpim-marker__icon.show {
+        visibility: visible;
+        opacity: 1; }
+    .wpim-marker .wpim-icon-image__hover {
+      visibility: hidden;
+      opacity: 0; }
+    .wpim-marker--image-hover:hover .wpim-icon-image {
+      visibility: hidden;
+      opacity: 0; }
+      .wpim-marker--image-hover:hover .wpim-icon-image__hover {
         visibility: visible;
         opacity: 1; }
     .wpim-marker__icon--zigzag {
@@ -2636,12 +2641,35 @@
         font-size: 13px;
         background-color: #fff;
         line-height: 24px; }
-        .wpim-marker .wpim-infowindow__close i {
-          -webkit-transition: .3s;
-          -o-transition: .3s;
-          transition: .3s; }
-        .wpim-marker .wpim-infowindow__close:hover i {
-          opacity: .6; }
+        .wpim-marker .wpim-infowindow__close .screen-reader-text {
+          clip: rect(1px, 1px, 1px, 1px);
+          height: 1px;
+          overflow: hidden;
+          position: absolute !important;
+          width: 1px;
+          word-wrap: normal !important; }
+        .wpim-marker .wpim-infowindow__close:after, .wpim-marker .wpim-infowindow__close:before {
+          content: '';
+          position: absolute;
+          width: 12px;
+          top: 47%;
+          height: 3px;
+          background-color: #333;
+          -webkit-transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+          left: 6px;
+          -webkit-transition: .2s;
+          -o-transition: .2s;
+          transition: .2s; }
+        .wpim-marker .wpim-infowindow__close:after {
+          -webkit-transform: rotate(-45deg);
+          -moz-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+        .wpim-marker .wpim-infowindow__close:hover:after, .wpim-marker .wpim-infowindow__close:hover:before {
+          background-color: #666; }
       .wpim-marker .wpim-infowindow:before {
         content: '';
         display: block;
@@ -2651,6 +2679,8 @@
         min-height: 30px; }
       .wpim-marker .wpim-infowindow--paragraph ul, .wpim-marker .wpim-infowindow--paragraph ol {
         padding-left: 20px; }
+      .wpim-marker .wpim-infowindow--paragraph .wpim-infowindow__inner {
+        padding: 20px 15px 15px 15px; }
       .wpim-marker .wpim-infowindow--top {
         top: auto;
         bottom: 100%;

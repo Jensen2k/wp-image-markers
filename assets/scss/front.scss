@@ -4,8 +4,8 @@
 .wpim{
 
     position: relative;
-    overflow: hidden;
     display: inline-block;
+    z-index: 9;
 
     &-image{
         img{
@@ -51,28 +51,34 @@
                 border-radius: inherit;
             }
 
-            .wpim-icon-image__hover{
-                visibility: hidden;
-                opacity: 0;
+            >i{
+                width: auto;
+                height: auto;
+                font-size: inherit;
+                line-height: inherit;
             }
-
-            &:hover{
-                .wpim-icon-image{
-                    visibility: hidden;
-                    opacity:0;
-                    &__hover{
-                        visibility: visible;
-                        opacity: 1;
-                    }
-                }
-
-            }
-
 
             &.show{
                 visibility: visible;
                 opacity: 1;
             }
+        }
+
+        .wpim-icon-image__hover{
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        &--image-hover:hover{
+            .wpim-icon-image{
+                visibility: hidden;
+                opacity:0;
+                &__hover{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+
         }
 
         &__icon--zigzag{
@@ -118,7 +124,7 @@
                 transition: .2s;
             }
         }
-        
+
         i{
             font-style: normal;
         }
@@ -164,12 +170,35 @@
                 font-size: 13px;
                 background-color: #fff;
                 line-height: 24px;
-                i{
-                    transition: .3s;
+                .screen-reader-text{
+                    clip: rect(1px, 1px, 1px, 1px);
+                    height: 1px;
+                    overflow: hidden;
+                    position: absolute !important;
+                    width: 1px;
+                    word-wrap: normal !important;
+                }
+                &:after,&:before{
+                    content: '';
+                    position: absolute;
+                    width: 12px;
+                    top: 47%;
+                    height: 3px;
+                    background-color: #333;
+                    -webkit-transform: rotate(45deg);
+                    -moz-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    left:6px;
+                    transition: .2s;
+                }
+                &:after{
+                    -webkit-transform: rotate(-45deg);
+                    -moz-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
                 }
                 &:hover{
-                    i{
-                        opacity: .6;
+                    &:after,&:before{
+                        background-color: #666;
                     }
                 }
             }
@@ -188,6 +217,9 @@
             &--paragraph{
                 ul,ol{
                     padding-left: 20px;
+                }
+                .wpim-infowindow__inner{
+                    padding:20px 15px 15px 15px;
                 }
             }
 

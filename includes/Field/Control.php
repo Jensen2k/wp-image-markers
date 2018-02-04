@@ -138,7 +138,7 @@ class Control {
 			$this->value = implode( ',', $this->value );
 		}
 
-		$output = '';
+		$output = '<span class="select-wrap">';
 
 		if ( $this->multiple ) {
 
@@ -162,7 +162,7 @@ class Control {
 			}
 		}
 
-		$output .= '</select>';
+		$output .= '</select></span>';
 
 		return $output;
 	}

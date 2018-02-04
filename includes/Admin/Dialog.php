@@ -14,6 +14,14 @@ class Dialog {
 
 		$data[$marker->get_type()] = $marker->get_value();
 
+		if ( $marker->get_type() == 'icon' ) {
+			$value = explode( ' ', $marker->get_value() );
+			$data['icon'] = array(
+				'type' => isset( $value[0] ) ? $value[0] : '',
+				'icon' => isset( $value[1] ) ? $value[1] : '',
+			);
+		}
+		
 		$data['color__background'] = $marker->css->background( 'color' );
 		$data['color__text'] = $marker->css->font( 'color' );
 
@@ -169,73 +177,28 @@ class Dialog {
 					),
 				),
 				array(
+					'title' => esc_html__( 'Position', 'wp-image-markers' ),
+					'name' => 'position',
+					'type' => 'text_group',
+					'value' => array( 'top' => 0, 'left' => 0 ),
+					'options' => array(
+						'top' => esc_attr__( 'Top', 'wp-image-markers' ),
+						'left' => esc_attr__( 'Left', 'wp-image-markers' )
+					),
+					'group' => esc_html__( 'Marker', 'wp-image-markers' ),
+					'description' => wp_kses( sprintf( __( 'Allowed metrics: %s', 'wp-image-markers' ), '<a target="_blank" href="http://www.w3schools.com/cssref/css_units.asp">Css units</a>' ), array( 'a' => array( 'href' => 1, 'target' => 1 ) ) )
+				),
+				//Styles group
+				array(
 					'title' => esc_html__( 'Background Color', 'wp-image-markers' ),
 					'name' => 'color__background',
 					'type' => 'color_picker',
 					'value' => '',
-					'group' => esc_html__( 'Marker', 'wp-image-markers' ),
+					'group' => esc_html__( 'Styles', 'wp-image-markers' ),
 					'dependency' => array(
 						'valueType' => array( 'values' => array( 'char', 'icon' ) ),
 					),
 					'input_attrs' => array( 'data-alpha' => 'true' )
-				),
-				//Hover
-				array(
-					'title' => esc_html__( 'Custom Hover', 'wp-image-markers' ),
-					'name' => 'custom_hover',
-					'type' => 'checkbox',
-					'value' => 0,
-					'group' => esc_html__( 'Marker Hover', 'wp-image-markers' ),
-					'description' => esc_html__( 'Use custom hover for this marker.', 'wp-image-markers' ),
-				),
-				array(
-					'title' => esc_html__( 'Background Color', 'wp-image-markers' ),
-					'name' => 'color__background_hover',
-					'type' => 'color_picker',
-					'value' => '',
-					'group' => esc_html__( 'Marker Hover', 'wp-image-markers' ),
-					'dependency' => array(
-						'valueType' => array( 'values' => array( 'char', 'icon' ) ),
-						'custom_hover' => array( 'values' => array( 1 ) ),
-					),
-					'input_attrs' => array(
-						'data-alpha' => 'true'
-					)
-				),
-				array(
-					'title' => esc_html__( 'Text Color', 'wp-image-markers' ),
-					'name' => 'color__text_hover',
-					'type' => 'color_picker',
-					'value' => '',
-					'group' => esc_html__( 'Marker Hover', 'wp-image-markers' ),
-					'dependency' => array(
-						'valueType' => array( 'values' => array( 'char', 'icon' ) ),
-						'custom_hover' => array( 'values' => array( 1 ) ),
-					),
-				),
-				array(
-					'title' => esc_html__( 'Border Color', 'wp-image-markers' ),
-					'name' => 'color__border_hover',
-					'type' => 'color_picker',
-					'value' => '',
-					'group' => esc_html__( 'Marker Hover', 'wp-image-markers' ),
-					'dependency' => array(
-						'custom_hover' => array( 'values' => array( 1 ) ),
-					),
-					'input_attrs' => array(
-						'data-alpha' => 'true'
-					)
-				),
-				array(
-					'title' => esc_html__( 'Select Image', 'wp-image-markers' ),
-					'name' => 'image_hover',
-					'type' => 'image_picker',
-					'value' => '',
-					'group' => esc_html__( 'Marker Hover', 'wp-image-markers' ),
-					'dependency' => array(
-						'valueType' => array( 'values' => array( 'image' ) ),
-						'custom_hover' => array( 'values' => array( 1 ) ),
-					),
 				),
 				//Font
 				array(
@@ -270,7 +233,7 @@ class Dialog {
 							'type' => 'color',
 						)
 					),
-					'group' => esc_html__( 'Marker', 'wp-image-markers' ),
+					'group' => esc_html__( 'Styles', 'wp-image-markers' ),
 					'description' => wp_kses( sprintf( __( 'Allowed metrics: %s', 'wp-image-markers' ), '<a target="_blank" href="http://www.w3schools.com/cssref/css_units.asp">Css units</a>' ), array( 'a' => array( 'href' => 1, 'target' => 1 ) ) )
 				),
 				//Border
@@ -305,7 +268,7 @@ class Dialog {
 							'type' => 'color',
 						)
 					),
-					'group' => esc_html__( 'Marker', 'wp-image-markers' ),
+					'group' => esc_html__( 'Styles', 'wp-image-markers' ),
 					'description' => wp_kses( sprintf( __( 'Allowed metrics: %s', 'wp-image-markers' ), '<a target="_blank" href="http://www.w3schools.com/cssref/css_units.asp">Css units</a>' ), array( 'a' => array( 'href' => 1, 'target' => 1 ) ) )
 				),
 				//Box Shadow
@@ -324,7 +287,7 @@ class Dialog {
 							'alpha' => true
 						)
 					),
-					'group' => esc_html__( 'Marker', 'wp-image-markers' ),
+					'group' => esc_html__( 'Styles', 'wp-image-markers' ),
 					'description' => wp_kses( sprintf( __( 'Allowed metrics: %s', 'wp-image-markers' ), '<a target="_blank" href="http://www.w3schools.com/cssref/css_units.asp">Css units</a>' ), array( 'a' => array( 'href' => 1, 'target' => 1 ) ) )
 				),
 				//Radius
@@ -333,7 +296,7 @@ class Dialog {
 					'name' => 'border_radius',
 					'type' => 'slider',
 					'value' => 100,
-					'group' => esc_html__( 'Marker', 'wp-image-markers' ),
+					'group' => esc_html__( 'Styles', 'wp-image-markers' ),
 					'options' => array(
 						'min' => 0,
 						'max' => 100,
@@ -345,7 +308,7 @@ class Dialog {
 					'name' => 'rotate',
 					'type' => 'slider',
 					'value' => 0,
-					'group' => esc_html__( 'Marker', 'wp-image-markers' ),
+					'group' => esc_html__( 'Styles', 'wp-image-markers' ),
 					'options' => array(
 						'min' => 0,
 						'max' => 360,
@@ -363,21 +326,68 @@ class Dialog {
 						'height' => esc_attr__( 'Height', 'wp-image-markers' ),
 						'line-height' => esc_attr__( 'Line height', 'wp-image-markers' )
 					),
-					'group' => esc_html__( 'Marker', 'wp-image-markers' ),
+					'group' => esc_html__( 'Styles', 'wp-image-markers' ),
 					'description' => wp_kses( sprintf( __( 'Allowed metrics: %s', 'wp-image-markers' ), '<a target="_blank" href="http://www.w3schools.com/cssref/css_units.asp">Css units</a>' ), array( 'a' => array( 'href' => 1, 'target' => 1 ) ) )
+				),
+				//Hover state
+				array(
+					'title' => esc_html__( 'Hover state', 'wp-image-markers' ),
+					'name' => 'custom_hover',
+					'type' => 'checkbox',
+					'value' => 0,
+					'group' => esc_html__( 'Styles', 'wp-image-markers' ),
+					'description' => esc_html__( 'Use custom hover for this marker.', 'wp-image-markers' ),
 				),
 				array(
-					'title' => esc_html__( 'Position', 'wp-image-markers' ),
-					'name' => 'position',
-					'type' => 'text_group',
-					'value' => array( 'top' => 0, 'left' => 0 ),
-					'options' => array(
-						'top' => esc_attr__( 'Top', 'wp-image-markers' ),
-						'left' => esc_attr__( 'Left', 'wp-image-markers' )
+					'title' => esc_html__( 'Background Color', 'wp-image-markers' ),
+					'name' => 'color__background_hover',
+					'type' => 'color_picker',
+					'value' => '',
+					'group' => esc_html__( 'Styles', 'wp-image-markers' ),
+					'dependency' => array(
+						'valueType' => array( 'values' => array( 'char', 'icon' ) ),
+						'custom_hover' => array( 'values' => array( 1 ) ),
 					),
-					'group' => esc_html__( 'Marker', 'wp-image-markers' ),
-					'description' => wp_kses( sprintf( __( 'Allowed metrics: %s', 'wp-image-markers' ), '<a target="_blank" href="http://www.w3schools.com/cssref/css_units.asp">Css units</a>' ), array( 'a' => array( 'href' => 1, 'target' => 1 ) ) )
+					'input_attrs' => array(
+						'data-alpha' => 'true'
+					)
 				),
+				array(
+					'title' => esc_html__( 'Text Color', 'wp-image-markers' ),
+					'name' => 'color__text_hover',
+					'type' => 'color_picker',
+					'value' => '',
+					'group' => esc_html__( 'Styles', 'wp-image-markers' ),
+					'dependency' => array(
+						'valueType' => array( 'values' => array( 'char', 'icon' ) ),
+						'custom_hover' => array( 'values' => array( 1 ) ),
+					),
+				),
+				array(
+					'title' => esc_html__( 'Border Color', 'wp-image-markers' ),
+					'name' => 'color__border_hover',
+					'type' => 'color_picker',
+					'value' => '',
+					'group' => esc_html__( 'Styles', 'wp-image-markers' ),
+					'dependency' => array(
+						'custom_hover' => array( 'values' => array( 1 ) ),
+					),
+					'input_attrs' => array(
+						'data-alpha' => 'true'
+					)
+				),
+				array(
+					'title' => esc_html__( 'Select Image', 'wp-image-markers' ),
+					'name' => 'image_hover',
+					'type' => 'image_picker',
+					'value' => '',
+					'group' => esc_html__( 'Styles', 'wp-image-markers' ),
+					'dependency' => array(
+						'valueType' => array( 'values' => array( 'image' ) ),
+						'custom_hover' => array( 'values' => array( 1 ) ),
+					),
+				),
+				//Window Info
 				array(
 					'title' => esc_html__( 'Data source', 'wp-image-markers' ),
 					'name' => 'datasource',

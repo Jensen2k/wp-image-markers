@@ -164,7 +164,7 @@ jQuery(function ($) {
 
             var $field = $(this);
 
-            $field.on('change', 'label input, select', function (e) {
+            $field.on('change', '.label input, .label select', function (e) {
                 var $this = $(this);
                 var $input = $field.find('input[type="hidden"]');
                 var obj = $input.val() != '' ? JSON.parse($input.val()) : {};

@@ -92,7 +92,7 @@ jQuery(function ($) {
 
             this.$el.draggable({
                 containment: 'parent',
-                handle: '.wpim-marker__drag',
+                handle: '.wpim-marker__icon',
                 stop: _.bind(this.onDragStop, this)
             });
 
@@ -152,6 +152,7 @@ jQuery(function ($) {
 
             this.$icon.removeAttr('style');
             this.$icon.css(css);
+            this.$icon.removeClass('wpim-marker__icon--zigzag');
             this.$icon.addClass('wpim-marker__icon--' + this.model.get('border').style);
             this.renderCssBorderArrow();
 
@@ -277,6 +278,7 @@ jQuery(function ($) {
                     'Save Changes': _.bind(this.onSave, this),
                 },
                 open: _.bind(this.onOpen, this),
+                close: _.bind(this.onClose, this)
             });
         },
         bindEvents: function () {
@@ -301,7 +303,9 @@ jQuery(function ($) {
             /**
              * Field icon picker
              */
-            this.$el.find('.wpim-icon_picker select').fontIconPicker();
+            if (this.$el.find('div.simple-iconfonts-picker').length) {
+                this.$el.find('div.simple-iconfonts-picker').trigger('simple-iconfonts-picker:update');
+            }
 
             /**
              * Field Color
@@ -408,8 +412,8 @@ jQuery(function ($) {
 
                 e.preventDefault();
             });
-             this.$el.find('div[data-param_name="valueType"] .wpim-radio li input:checked').change();
-            
+            this.$el.find('div[data-param_name="valueType"] .wpim-radio li input:checked').change();
+
             var importMarker = _.bind(this.import, this);
             $avaiables.on('change', 'input[type="radio"]', function () {
                 var $this = $(this);
@@ -420,19 +424,35 @@ jQuery(function ($) {
                 }
             });
 
+
+
         },
         open: function (marker) {
             this.marker = marker;
+            this.marker.$el.addClass('current-edit');
+            $('#wp_image_markers_content .inside').addClass('locked');
             this.$el.dialog('open');
+        },
+        onClose: function (e) {
+            $('#wp_image_markers_content .inside').removeClass('locked');
+            this.marker.$el.removeClass('current-edit');
+            this.$el.find('.wpim_dialog_inner').empty();
         },
         onSave: function (e) {
 
             var $dialog = this.$el;
 
             this.marker.model.set('valueType', $dialog.find('#valueType').val());
-            this.marker.model.set('value', $dialog.find('#' + this.marker.model.get('valueType')).val());
             this.marker.model.set('custom_hover', $dialog.find('#custom_hover').is(':checked') ? 1 : 0);
             this.marker.model.set('available', $dialog.find('#available').val());
+
+            if (this.marker.model.get('valueType') === 'icon') {
+                var $icon = $dialog.find('#icon');
+                var value = $icon.find('#icon-type').val() + ' ' + $icon.find('#icon-icon').val();
+                this.marker.model.set('value', value);
+            } else {
+                this.marker.model.set('value', $dialog.find('#' + this.marker.model.get('valueType')).val());
+            }
 
             this.marker.model.set('image_hover', $dialog.find('#image_hover').val());
 
@@ -454,7 +474,6 @@ jQuery(function ($) {
 
             var font = JSON.parse($dialog.find('#font').val());
             font.color_hover = $dialog.find('#color__text_hover').val();
-
             this.marker.model.set('font', font);
 
             var datasource = $dialog.find('#datasource').val();
@@ -526,12 +545,31 @@ jQuery(function ($) {
         },
         onCancel: function (e) {
             this.$el.dialog('close');
-            this.$el.find('.wpim_dialog_inner').empty();
         },
         import: function (data) {
-            
+
+            var type = this.$el.find('#valueType').val();
+            if (type == 'char') {
+                var $char = this.$el.find('#char');
+                if ($char.val() == '') {
+                    $char.val(data.value).change();
+                }
+            } else if (type == 'icon' && data.value) {
+                var $icon = this.$el.find('#icon');
+                var value = data.value.split(' ');
+                if (value.length == 2) {
+                    $icon.find('#icon-type').val(value[0]);
+                    $icon.find('#icon-icon').val(value[1]);
+                    if (this.$el.find('div.simple-iconfonts-picker').length) {
+                        this.$el.find('div.simple-iconfonts-picker').trigger('simple-iconfonts-picker:update');
+                    }
+                }
+
+
+            }
+
             this.$el.find('#custom_hover').prop('checked', data.custom_hover).change();
-            
+
             this.$el.find('#color__background').val(data.background.color).change();
             this.$el.find('#color__background_hover').val(data.background.color_hover).change();
 

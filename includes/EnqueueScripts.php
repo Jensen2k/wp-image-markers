@@ -19,7 +19,6 @@ class EnqueueScripts {
 	public static function load_scripts() {
 
 		wp_enqueue_style( 'wpim-style', WPIM_URL . '/assets/css/front.css', null, WPIM_VERSION );
-		wp_enqueue_style( 'font-awesome', WPIM_URL . '/assets/vendors/font-awesome/css/font-awesome.min.css', null, '4.7.0' );
 		wp_enqueue_style( 'animate', WPIM_URL . '/assets/css/animate.css', null, '3.5.2' );
 		wp_enqueue_script( 'wpim', WPIM_URL . '/assets/js/front.js', array( 'jquery' ), WPIM_VERSION );
 		$arrCss = get_option( 'wpim_css', array() );
@@ -44,9 +43,6 @@ class EnqueueScripts {
 
 				wp_enqueue_style( 'wpim-admin', WPIM_URL . '/assets/css/admin.css', null, WPIM_VERSION );
 				wp_enqueue_style( 'wpim-admin', WPIM_URL . '/assets/css/admin.css', null, WPIM_VERSION );
-
-				wp_enqueue_style( 'font-awesome', WPIM_URL . '/assets/vendors/font-awesome/css/font-awesome.min.css', null, '4.7.0' );
-
 				wp_enqueue_script( 'wpim-dependency', WPIM_URL . 'assets/vendors/dependency/dependency.js', array( 'jquery' ), WPIM_VERSION );
 
 				//Dialog
@@ -54,10 +50,7 @@ class EnqueueScripts {
 				wp_enqueue_script( 'jquery-ui-draggable' );
 				wp_enqueue_script( 'jquery-ui-dialog' );
 				wp_enqueue_script( 'jquery-ui-slider' );
-
-				//Filed icon
-				wp_enqueue_script( 'font-iconpicker', WPIM_URL . 'assets/vendors/fonticonpicker/js/jquery.fonticonpicker.js', array( 'jquery' ), WPIM_VERSION );
-				wp_enqueue_style( 'font-iconpicker', WPIM_URL . 'assets/vendors/fonticonpicker/css/jquery.fonticonpicker.css', null, WPIM_VERSION );
+				
 
 				//Field color
 				wp_enqueue_script( 'wp-color-picker' );

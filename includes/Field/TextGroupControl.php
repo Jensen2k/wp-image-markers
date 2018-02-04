@@ -32,20 +32,21 @@ class TextGroupControl extends Control {
 					'key' => '',
 					'value' => '',
 					'options' => array(),
-					'alpha' => true
+					'alpha' => true,
+					'id' => sprintf( '%s__%s', $this->name, $key )
 						) );
 
 				$args['value'] = isset( $this->value[$key] ) ? $this->value[$key] : '';
 				$args['key'] = $key;
 
-				echo '<label>';
-				echo '<span>' . esc_html( $args['label'] ) . '</span>';
+				echo '<div class="label">';
+				echo '<label for="' . esc_attr( $args['id'] ) . '">' . esc_html( $args['label'] ) . '</label>';
 
 				if ( method_exists( $this, $args['type'] ) ) {
 					$this->{$args['type']}( $args );
 				}
 
-				echo '</label>';
+				echo '</div>';
 			}
 			?>
 		</div>
@@ -60,7 +61,7 @@ class TextGroupControl extends Control {
 	 * @return void
 	 */
 	public function textfield( $args = array() ) {
-		printf( '<input type="text" data-name="%s" value="%s"/>', $args['key'], $args['value'] );
+		printf( '<input id="%s" type="text" data-name="%s" value="%s"/>', $args['id'], $args['key'], $args['value'] );
 	}
 
 	/**
@@ -70,7 +71,7 @@ class TextGroupControl extends Control {
 	 * @return void
 	 */
 	public function color( $args = array() ) {
-		printf( '<input type="text" data-name="%1$s" value="%2$s" data-default-color="%2$s" data-alpha="%3$s" />', $args['key'], $args['value'], $args['alpha'] );
+		printf( '<input id="%4$s" type="text" data-name="%1$s" value="%2$s" data-default-color="%2$s" data-alpha="%3$s" />', $args['key'], $args['value'], $args['alpha'], $args['id'] );
 	}
 
 	/**
@@ -81,7 +82,7 @@ class TextGroupControl extends Control {
 	 */
 	public function select( $args = array() ) {
 
-		printf( '<select data-name="%s">', $args['key'] );
+		printf( '<span class="select-wrap"><select id="%s" data-name="%s">', $args['id'], $args['key'] );
 
 		foreach ( $args['options'] as $key => $value ) {
 
@@ -90,7 +91,7 @@ class TextGroupControl extends Control {
 			printf( '<option %s value="%s">%s</option>', $selected, $key, $value );
 		}
 
-		echo '</select>';
+		echo '</select></span>';
 	}
 
 }

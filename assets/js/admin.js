@@ -656,9 +656,9 @@ jQuery(function ($) {
             var imageDialog = this.imageDialog;
 
             this.imageDialog = wp.media.frames.file_frame = wp.media({
-                title: 'Add Image',
+                title: 'Choose Image',
                 button: {
-                    text: 'Add Image'
+                    text: 'Use Image'
                 },
                 library: {
                     type: 'image'

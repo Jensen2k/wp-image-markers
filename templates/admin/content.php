@@ -18,7 +18,7 @@
 
 		<button type="button" class="wpim-toolbar__button wpim-toolbar--outline js-wpim-add-image">
 			<span class="dashicons dashicons-format-image"></span>
-			<?php echo esc_html__( 'Add image', 'wp-image-markers' ) ?>
+			<?php echo esc_html__( 'Choose image', 'wp-image-markers' ) ?>
 		</button>
 
 		<div class='wpim-shortcode'>

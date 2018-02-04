@@ -78,7 +78,7 @@ class Dialog {
 					'type' => 'radio',
 					'value' => '',
 					'options' => array(
-						'char' => esc_attr__( 'Letter', 'wp-image-markers' ),
+						'char' => esc_attr__( 'Text', 'wp-image-markers' ),
 						'image' => esc_attr__( 'Image', 'wp-image-markers' ),
 						'icon' => esc_attr__( 'Icon', 'wp-image-markers' )
 					),
@@ -86,7 +86,7 @@ class Dialog {
 					'group' => esc_html__( 'Marker', 'wp-image-markers' ),
 				),
 				array(
-					'title' => esc_html__( 'Availables', 'wp-image-markers' ),
+					'title' => esc_html__( 'Style', 'wp-image-markers' ),
 					'name' => 'available',
 					'type' => 'radio_image',
 					'value' => '',
@@ -145,7 +145,7 @@ class Dialog {
 					'group' => esc_html__( 'Marker', 'wp-image-markers' ),
 				),
 				array(
-					'title' => esc_html__( 'Number or letter', 'wp-image-markers' ),
+					'title' => esc_html__( 'Text', 'wp-image-markers' ),
 					'name' => 'char',
 					'type' => 'text',
 					'value' => '',
@@ -186,7 +186,7 @@ class Dialog {
 						'left' => esc_attr__( 'Left', 'wp-image-markers' )
 					),
 					'group' => esc_html__( 'Marker', 'wp-image-markers' ),
-					'description' => wp_kses( sprintf( __( 'Allowed metrics: %s', 'wp-image-markers' ), '<a target="_blank" href="http://www.w3schools.com/cssref/css_units.asp">Css units</a>' ), array( 'a' => array( 'href' => 1, 'target' => 1 ) ) )
+					'description' => wp_kses( sprintf( __( 'Use px, %, em... check %s for more.', 'wp-image-markers' ), '<a target="_blank" href="http://www.w3schools.com/cssref/css_units.asp">Css units</a>' ), array( 'a' => array( 'href' => 1, 'target' => 1 ) ) )
 				),
 				//Styles group
 				array(

@@ -35,9 +35,9 @@ jQuery(function ($) {
             }
 
             file_frames[$field.attr('id')] = wp.media.frames.file_frame = wp.media({
-                title: 'Add Images',
+                title: 'Choose Images',
                 button: {
-                    text: 'Add Images'
+                    text: 'Use Images'
                 },
                 library: {
                     type: 'image'

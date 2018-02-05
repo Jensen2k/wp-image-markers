@@ -13,7 +13,7 @@ Add and drag marker icons with tooltips in a image.
 
 == Description ==
 
-WP Image Markers is a marker builder helps you add multiple marker icons with tooltips and drag them any where in a image background.
+WP Image Markers is a marker builder that helps you add multiple marker icons with tooltips and drag them to any where in a image background.
 Amazing and powerful admin with lightweight and smooth front-end display
 
 === Features ===

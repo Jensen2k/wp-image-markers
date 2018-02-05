@@ -15,11 +15,12 @@ class PostType {
 
 		register_post_type( 'wp_image_markers', array(
 			'labels' => array(
-				'name' => __( 'Image Markers', 'wp-image-markers' ),
-				'singular_name' => __( 'WP Image Markers', 'wp-image-markers' ),
-				'edit_item' => __( 'Edit Image Marker', 'wp-image-markers' ),
-				'add_new_item' => __( 'Add new Image Marker', 'wp-image-markers' )
+				'name' => esc_html__( 'Image Markers', 'wp-image-markers' ),
+				'singular_name' => esc_html__( 'WP Image Markers', 'wp-image-markers' ),
+				'edit_item' => esc_html__( 'Edit Image Marker', 'wp-image-markers' ),
+				'add_new_item' => esc_html__( 'Add new Image Marker', 'wp-image-markers' )
 			),
+			'menu_icon' => 'dashicons-location-alt',
 			'public' => false,
 			'has_archive' => false,
 			'rewrite' => false,

@@ -399,9 +399,9 @@ class Dialog {
 				array(
 					'name' => 'post_type',
 					'type' => 'autocomplete',
-					'title' => __( 'Select post', 'wp-image-markers' ),
+					'title' => esc_html__( 'Select post', 'wp-image-markers' ),
 					'value' => '',
-					'desc' => __( 'Ajax select', 'wp-image-markers' ),
+					'desc' => esc_html__( 'Ajax select', 'wp-image-markers' ),
 					'data' => array( 'post_type' => array( 'post' ) ),
 					'min_length' => 3,
 					'dependency' => array(

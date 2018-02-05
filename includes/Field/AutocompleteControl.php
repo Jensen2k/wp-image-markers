@@ -42,7 +42,7 @@ class AutocompleteControl extends Control {
 
 		$output .= sprintf( '<input type="hidden" value="%s" %s/>',$this->value, implode( ' ', $this->input_attrs() ) );
 
-		$placeholder = sprintf( __( 'Please enter %d or more characters', 'wp-image-markers' ), $this->min_length );
+		$placeholder = sprintf( esc_html__( 'Please enter %d or more characters', 'wp-image-markers' ), $this->min_length );
 
 		if ( $this->placeholder ) {
 			$placeholder = $this->placeholder;

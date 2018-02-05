@@ -1,0 +1,407 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-05 16:26+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: includes/WPIM.php:33 includes/WPIM.php:42
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: templates/markers.php:55
+msgid "Close"
+msgstr ""
+
+#: includes/Admin/PostType.php:18 includes/Admin/PostType.php:36
+msgid "Image Markers"
+msgstr ""
+
+#: includes/Admin/PostType.php:19
+msgid "WP Image Markers"
+msgstr ""
+
+#: includes/Admin/PostType.php:20
+msgid "Edit Image Marker"
+msgstr ""
+
+#: includes/Admin/PostType.php:21
+msgid "Add new Image Marker"
+msgstr ""
+
+#: includes/Admin/PostType.php:51
+msgid "Security is valid."
+msgstr ""
+
+#: includes/Admin/PostType.php:55
+msgid "You have no permission."
+msgstr ""
+
+#: includes/Admin/Settings.php:40 includes/Admin/Dialog.php:72
+msgid "Settings"
+msgstr ""
+
+#: includes/Admin/Settings.php:117 includes/Admin/Metabox.php:124
+msgid "General"
+msgstr ""
+
+#: includes/Admin/Metabox.php:31
+msgid "WPIM Metabox"
+msgstr ""
+
+#: includes/Admin/Dialog.php:63
+msgid "Page"
+msgstr ""
+
+#: includes/Admin/Dialog.php:76
+msgid "Marker type"
+msgstr ""
+
+#: includes/Admin/Dialog.php:81 includes/Admin/Dialog.php:148
+msgid "Text"
+msgstr ""
+
+#: includes/Admin/Dialog.php:82
+msgid "Image"
+msgstr ""
+
+#: includes/Admin/Dialog.php:83
+msgid "Icon"
+msgstr ""
+
+#: includes/Admin/Dialog.php:86 includes/Admin/Dialog.php:145
+#: includes/Admin/Dialog.php:157 includes/Admin/Dialog.php:167
+#: includes/Admin/Dialog.php:174 includes/Admin/Dialog.php:188
+msgid "Marker"
+msgstr ""
+
+#: includes/Admin/Dialog.php:89 includes/Admin/Dialog.php:224
+#: includes/Admin/Dialog.php:251
+msgid "Style"
+msgstr ""
+
+#: includes/Admin/Dialog.php:156
+msgid "Enter a number or a letter in alphabet."
+msgstr ""
+
+#: includes/Admin/Dialog.php:160
+msgid "Select Icon"
+msgstr ""
+
+#: includes/Admin/Dialog.php:170 includes/Admin/Dialog.php:380
+msgid "Select Image"
+msgstr ""
+
+#: includes/Admin/Dialog.php:180 includes/Admin/Dialog.php:424
+msgid "Position"
+msgstr ""
+
+#: includes/Admin/Dialog.php:185 includes/Admin/Dialog.php:429
+msgid "Top"
+msgstr ""
+
+#: includes/Admin/Dialog.php:186 includes/Admin/Dialog.php:432
+msgid "Left"
+msgstr ""
+
+#: includes/Admin/Dialog.php:189
+msgid "Use px, %, em... check %s for more."
+msgstr ""
+
+#: includes/Admin/Dialog.php:193 includes/Admin/Dialog.php:342
+msgid "Background Color"
+msgstr ""
+
+#: includes/Admin/Dialog.php:197 includes/Admin/Dialog.php:236
+#: includes/Admin/Dialog.php:271 includes/Admin/Dialog.php:290
+#: includes/Admin/Dialog.php:299 includes/Admin/Dialog.php:311
+#: includes/Admin/Dialog.php:329 includes/Admin/Dialog.php:338
+#: includes/Admin/Dialog.php:346 includes/Admin/Dialog.php:360
+#: includes/Admin/Dialog.php:371 includes/Admin/Dialog.php:384
+msgid "Styles"
+msgstr ""
+
+#: includes/Admin/Dialog.php:205
+msgid "Font"
+msgstr ""
+
+#: includes/Admin/Dialog.php:211
+msgid "Size"
+msgstr ""
+
+#: includes/Admin/Dialog.php:215
+msgid "Weight"
+msgstr ""
+
+#: includes/Admin/Dialog.php:218
+msgid "Lighter"
+msgstr ""
+
+#: includes/Admin/Dialog.php:219 includes/Admin/Dialog.php:227
+msgid "Normal"
+msgstr ""
+
+#: includes/Admin/Dialog.php:220
+msgid "Bold"
+msgstr ""
+
+#: includes/Admin/Dialog.php:228
+msgid "Italic"
+msgstr ""
+
+#: includes/Admin/Dialog.php:232 includes/Admin/Dialog.php:267
+#: includes/Admin/Dialog.php:285
+msgid "Color"
+msgstr ""
+
+#: includes/Admin/Dialog.php:237 includes/Admin/Dialog.php:272
+#: includes/Admin/Dialog.php:291 includes/Admin/Dialog.php:330
+#, php-format
+msgid "Allowed metrics: %s"
+msgstr ""
+
+#: includes/Admin/Dialog.php:241
+msgid "Border"
+msgstr ""
+
+#: includes/Admin/Dialog.php:247 includes/Admin/Dialog.php:325
+msgid "Width"
+msgstr ""
+
+#: includes/Admin/Dialog.php:254
+msgid "None"
+msgstr ""
+
+#: includes/Admin/Dialog.php:255
+msgid "Dashed"
+msgstr ""
+
+#: includes/Admin/Dialog.php:256
+msgid "Dotted"
+msgstr ""
+
+#: includes/Admin/Dialog.php:257
+msgid "Double"
+msgstr ""
+
+#: includes/Admin/Dialog.php:258
+msgid "Solid"
+msgstr ""
+
+#: includes/Admin/Dialog.php:259
+msgid "Zigzag"
+msgstr ""
+
+#: includes/Admin/Dialog.php:260
+msgid "Solid arrow top"
+msgstr ""
+
+#: includes/Admin/Dialog.php:261
+msgid "Solid arrow right"
+msgstr ""
+
+#: includes/Admin/Dialog.php:262
+msgid "Solid arrow bottom"
+msgstr ""
+
+#: includes/Admin/Dialog.php:263
+msgid "Solid arrow left"
+msgstr ""
+
+#: includes/Admin/Dialog.php:276
+msgid "Box shadow"
+msgstr ""
+
+#: includes/Admin/Dialog.php:281
+msgid "Horizontal"
+msgstr ""
+
+#: includes/Admin/Dialog.php:282
+msgid "Vertical"
+msgstr ""
+
+#: includes/Admin/Dialog.php:283
+msgid "Blur"
+msgstr ""
+
+#: includes/Admin/Dialog.php:295
+msgid "Border radius"
+msgstr ""
+
+#: includes/Admin/Dialog.php:307
+msgid "Rotate"
+msgstr ""
+
+#: includes/Admin/Dialog.php:320
+msgid "Dimension"
+msgstr ""
+
+#: includes/Admin/Dialog.php:326
+msgid "Height"
+msgstr ""
+
+#: includes/Admin/Dialog.php:327
+msgid "Line height"
+msgstr ""
+
+#: includes/Admin/Dialog.php:334
+msgid "Hover state"
+msgstr ""
+
+#: includes/Admin/Dialog.php:339
+msgid "Use custom hover for this marker."
+msgstr ""
+
+#: includes/Admin/Dialog.php:356
+msgid "Text Color"
+msgstr ""
+
+#: includes/Admin/Dialog.php:367
+msgid "Border Color"
+msgstr ""
+
+#: includes/Admin/Dialog.php:392
+msgid "Data source"
+msgstr ""
+
+#: includes/Admin/Dialog.php:397 includes/Admin/Dialog.php:410
+#: includes/Admin/Dialog.php:417 includes/Admin/Dialog.php:435
+#: includes/Admin/Dialog.php:448
+msgid "Info window"
+msgstr ""
+
+#: includes/Admin/Dialog.php:402
+msgid "Select post"
+msgstr ""
+
+#: includes/Admin/Dialog.php:404
+msgid "Ajax select"
+msgstr ""
+
+#: includes/Admin/Dialog.php:413
+msgid "Paragraph"
+msgstr ""
+
+#: includes/Admin/Dialog.php:416
+msgid "Hello world!"
+msgstr ""
+
+#: includes/Admin/Dialog.php:430
+msgid "Right"
+msgstr ""
+
+#: includes/Admin/Dialog.php:431
+msgid "Bottom"
+msgstr ""
+
+#: includes/Admin/Dialog.php:436
+msgid "Info window will be appeared by position"
+msgstr ""
+
+#: includes/Admin/Dialog.php:439
+msgid "Event"
+msgstr ""
+
+#: includes/Admin/Dialog.php:444
+msgid "Hover"
+msgstr ""
+
+#: includes/Admin/Dialog.php:445
+msgid "Click"
+msgstr ""
+
+#: includes/Admin/Dialog.php:449
+msgid "Info window will be appeared after the event is action."
+msgstr ""
+
+#: includes/Field/LinkControl.php:28
+msgid "Select URL"
+msgstr ""
+
+#: includes/Field/LinkControl.php:30
+msgid "Link Text:"
+msgstr ""
+
+#: includes/Field/LinkControl.php:34
+msgid "URL:"
+msgstr ""
+
+#: includes/Field/ImagePickerControl.php:39 templates/admin/content.php:56
+msgid "Remove"
+msgstr ""
+
+#: includes/Field/ImagePickerControl.php:49
+#: includes/Field/ImagePickerControl.php:49
+msgid "Add images"
+msgstr ""
+
+#: includes/Field/IconPickerControl.php:27
+#, php-format
+msgid "%s Plugin should be activated to enable Icon Picker."
+msgstr ""
+
+#: includes/Field/AutocompleteControl.php:45
+#, php-format
+msgid "Please enter %d or more characters"
+msgstr ""
+
+#: templates/admin/content.php:16
+msgid "Add marker"
+msgstr ""
+
+#: templates/admin/content.php:21
+msgid "Choose image"
+msgstr ""
+
+#: templates/admin/content.php:37
+msgid "Save changes"
+msgstr ""
+
+#: templates/admin/content.php:52
+msgid "Click to Edit"
+msgstr ""
+
+#: templates/admin/content.php:54
+msgid "Copy"
+msgstr ""
+
+#: templates/admin/content.php:55
+msgid "Edit"
+msgstr ""
+
+#: templates/admin/content.php:78
+msgid "Marker Settings"
+msgstr ""
+
+#: templates/admin/content.php:81
+msgid "Loading..."
+msgstr ""
+
+#. Name of the plugin
+msgid "WP Image Makers - Easy Hotspot Solution"
+msgstr ""
+
+#. Description of the plugin
+msgid "Add and drag marker icons with tooltips in a image."
+msgstr ""
+
+#. URI of the plugin
+msgid "https://wordpress.org/plugins/wp-image-markers"
+msgstr ""
+
+#. Author of the plugin
+msgid "WeDesignWeBuild"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://profiles.wordpress.org/wedesignwebuild"
+msgstr ""

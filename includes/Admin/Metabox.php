@@ -28,7 +28,7 @@ class Metabox {
 		$defaults = array(
 			'id' => 'wpim_metabox',
 			'post_type' => 'wp_image_markers',
-			'title' => __( 'WPIM Metabox', 'wp-image-markers' ),
+			'title' => esc_html__( 'WPIM Metabox', 'wp-image-markers' ),
 			'context' => 'advanced',
 			'priority' => 'low',
 			'fields' => array(
@@ -121,7 +121,7 @@ class Metabox {
 			$index = 0;
 			foreach ( $this->group_fields as $name => $fields ) {
 
-				$name = empty( $name ) ? __( 'General', 'wp-image-markers' ) : $name;
+				$name = empty( $name ) ? esc_html__( 'General', 'wp-image-markers' ) : $name;
 				$index++;
 				$active = $index == 1 ? 'active' : '';
 				$id = $this->id . '-group_' . $index;

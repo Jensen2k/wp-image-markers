@@ -27,19 +27,19 @@ class WPIM {
 
 	/**
 	 * Cloning is forbidden.
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public function __clone() {
-		_doing_it_wrong( __FUNCTION__, __( 'Cheatin&#8217; huh?', 'wp-image-markers' ), '1.0' );
+		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'wp-image-markers' ), '1.0.0' );
 	}
 
 	/**
 	 * Unserializing instances of this class is forbidden.
-	 * @since 1.0
+	 * @since 1.0.0
 	 */
 	public function __wakeup() {
 
-		_doing_it_wrong( __FUNCTION__, __( 'Cheatin&#8217; huh?', 'wp-image-markers' ), '1.0' );
+		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'wp-image-markers' ), '1.0.0' );
 	}
 
 	public $mailer;

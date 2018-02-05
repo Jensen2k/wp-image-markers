@@ -39,11 +39,9 @@ class TextareaHtmlControl extends Control {
 
 			// Prevent premature closing of textarea in case format_for_editor() didn't apply or the_editor_content filter did a wrong thing.
 			$escaped_text = preg_replace( '#</textarea#i', '&lt;/textarea', $text );
-			
-			$escaped_text = stripcslashes( $escaped_text);
 			?>
 
-			<textarea id="<?php echo esc_attr( $this->name ) ?>" name="<?php echo esc_attr( $this->name ) ?>" class="widefat wpim_value"><?php echo $escaped_text; ?></textarea>
+			<textarea id="<?php echo esc_attr( $this->name ) ?>" name="<?php echo esc_attr( $this->name ) ?>" class="widefat wpim_value"><?php echo stripcslashes( $escaped_text); ?></textarea>
 		</div>
 		<?php
 		return ob_get_clean();

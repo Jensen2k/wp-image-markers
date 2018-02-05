@@ -5,7 +5,7 @@ Contributors: wedesignwebuild, awethemes
 Tags: image marker,image hotspots, hotspot, image map, image, image point, markers
 Requires at least: 4.5    
 Tested up to: 4.9    
-Stable tag: 1.0.0-beta-1    
+Stable tag: 1.0.0
 License: GPLv3    
 License URI: http://www.gnu.org/licenses/gpl-3.0.html    
 
@@ -18,7 +18,7 @@ Amazing and powerful admin with lightweight and smooth front-end display
 
 === Features ===
 
-- Eye-catching and friendly admin module
+- Eye-catching and friendly
 - Drag drop markers
 - Easy to clone, edit, remove a marker 
 - Add image icon, font icon, text to icon
@@ -58,5 +58,5 @@ Yes, you can add and drag it to any where in image.
 
 == Changelog ==
 
-= 1.0.0-beta-1 (February 1, 2017): =
+= 1.0.0 (February 5, 2017): =
 * Initial Public Release

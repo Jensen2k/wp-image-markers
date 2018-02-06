@@ -2,18 +2,18 @@
 
 Donate link:    
 Contributors: wedesignwebuild, awethemes    
-Tags: image marker,image hotspots, hotspot, image map, image, image point, markers
+Tags: image marker, image hotspots, hotspot, image map, image, image point, markers
 Requires at least: 4.5    
 Tested up to: 4.9    
 Stable tag: 1.0.0
 License: GPLv3    
 License URI: http://www.gnu.org/licenses/gpl-3.0.html    
 
-Add and drag marker icons with tooltips in a image.
+Easy way to add markers to an image and drag to reposition them.
 
 == Description ==
 
-WP Image Markers is a marker builder that helps you add multiple marker icons with tooltips and drag them to any where in a image background.
+WP Image Markers is a marker builder that helps you add multiple markers (with customize tooltips) and drag them anywhere in background.
 Amazing and powerful admin with lightweight and smooth front-end display
 
 === Features ===
@@ -21,7 +21,7 @@ Amazing and powerful admin with lightweight and smooth front-end display
 - Eye-catching and friendly
 - Drag drop markers
 - Easy to clone, edit, remove a marker 
-- Add image icon, font icon, text to icon
+- Use image icon, font icon or text
 - Optional markers color
 - MCE editor in tooltip, it can also connect to post, page, product or any post types
 - Two events to show tooltip (Hover and Click)
@@ -38,7 +38,7 @@ Amazing and powerful admin with lightweight and smooth front-end display
 
 == Frequently Asked Questions ==
 
-= Can i add add image icon, font icon or any text in marker?
+= Can i use image icon, font icon or any text in marker?
 Yes, you can do it easily.
 
 = Can i drag icon? =

@@ -2,7 +2,7 @@
 
 /**
  * Plugin Name:     WP Image Makers - Easy Hotspot Solution
- * Plugin URI:      https://wordpress.org/plugins/wp-image-markers
+ * Plugin URI:      https://wordpress.org/plugins/wp-image-makers-easy-hotspot-solution/
  * Description:     Add and drag marker icons with tooltips in a image.    
  * Version:         1.0.0   
  * Author:          WeDesignWeBuild

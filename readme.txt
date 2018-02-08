@@ -1,4 +1,4 @@
-=== WP Image Makers - Easy Hotspot Solution ===
+=== WP Image Markers - Easy Hotspot Solution ===
 
 Donate link:    
 Contributors: wedesignwebuild, awethemes    

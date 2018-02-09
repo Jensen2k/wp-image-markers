@@ -1,4 +1,4 @@
-=== WP Image Makers - Easy Hotspot Solution ===
+=== WP Image Markers - Easy Hotspot Solution ===
 
 Donate link:    
 Contributors: wedesignwebuild, awethemes    
@@ -31,6 +31,10 @@ You can check plugin document [here](http://docs.awethemes.com/wp-image-markers/
 - Optional tooltip position (top, right, bottom, left)
 - Build for performance
 - Use css3 animation
+
+=== Video tutorial ===
+
+<iframe width="853" height="480" src="https://www.youtube.com/embed/UrQOUgCVU_I" frameborder="0" allowfullscreen></iframe>
 
 == Installation ==
 

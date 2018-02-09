@@ -52,10 +52,12 @@ Yes, you can add and drag it to any where in image.
 
 == Screenshots ==
 
-1. Show product as markers
-2. Show real estate markers
-3. Show multiple types of markers
-4. Admin screen
+1. Markers in front-end
+2. Show info window
+3. Edit a marker
+4. Edit info window with paragraph
+5. Edit info window with product
+6. Edit marker styles
 
 == Upgrade Notice ==
 

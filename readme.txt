@@ -16,6 +16,8 @@ Easy way to add markers to an image and drag to reposition them.
 WP Image Markers is a marker builder that helps you add multiple markers (with customize tooltips) and drag them anywhere in background.
 Amazing and powerful admin with lightweight and smooth front-end display.
 
+[Plugin demo here](demo.awethemes.com/wp-image-markers/).
+
 You can check plugin document [here](http://docs.awethemes.com/wp-image-markers/).
 
 === Features ===
